@@ -1,0 +1,430 @@
+/* Reset และ Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Container และ Card */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Content */
+.content {
+    padding: 40px;
+}
+
+/* Step Indicator */
+.step-indicator {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.step.active .step-number {
+    background: #667eea;
+    color: white;
+}
+
+.step.completed .step-number {
+    background: #4caf50;
+    color: white;
+}
+
+.step-label {
+    font-weight: 500;
+    color: #666;
+}
+
+.step.active .step-label {
+    color: #667eea;
+}
+
+/* Pages */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.page-title {
+    margin-bottom: 20px;
+    color: #1e3c72;
+}
+
+/* Training Info Section */
+.training-info {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border-left: 5px solid #667eea;
+}
+
+.training-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.training-header h3 {
+    color: #1e3c72;
+    margin: 0 0 15px 0;
+    font-size: 1.3rem;
+}
+
+.training-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.training-main {
+    margin: 0 0 15px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2c3e50;
+    line-height: 1.7;
+}
+
+.training-highlight {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.training-highlight span {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.training-features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.feature {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+}
+
+.feature i {
+    font-size: 2rem;
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    margin: 0;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.certificate-info {
+    background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.certificate-info i {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.cert-title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.cert-desc {
+    margin: 5px 0 0 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-label.required::after {
+    content: " *";
+    color: #e74c3c;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Prompt', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-input.error {
+    border-color: #e74c3c;
+}
+
+.time-other-input {
+    margin-left: 10px;
+    width: 200px;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Checkbox Styles */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+/* Button Styles */
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Prompt', sans-serif;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary {
+    background: #f8f9fa;
+    color: #666;
+    border: 2px solid #e0e0e0;
+}
+
+.btn-secondary:hover {
+    background: #e9ecef;
+}
+
+.btn-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* PDPA Content */
+.pdpa-content {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border-left: 4px solid #667eea;
+}
+
+.pdpa-content ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+/* Thank You Page */
+.thank-you-icon {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.thank-you-icon i {
+    font-size: 4rem;
+    color: #4caf50;
+}
+
+.thank-you-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4caf50;
+}
+
+.thank-you-content {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.contact-info {
+    margin-top: 30px;
+}
+
+/* Loading */
+.loading {
+    display: none;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .step-indicator {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step {
+        margin: 5px 0;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .training-features {
+        flex-direction: column;
+    }
+
+    .feature {
+        min-width: auto;
+        margin-bottom: 15px;
+    }
+
+    .time-other-input {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .checkbox-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
