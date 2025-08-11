@@ -270,14 +270,13 @@ body {
 .checkbox-group {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .checkbox-item {
     display: flex;
     align-items: center;
     gap: 10px;
-    flex-wrap: wrap;
 }
 
 .checkbox-item input[type="checkbox"] {
@@ -285,13 +284,25 @@ body {
     flex-shrink: 0;
 }
 
+/* แยกการจัดการ PDPA checkbox บน desktop */
+.form-group > .checkbox-item {
+    align-items: flex-start;
+}
+
+.form-group > .checkbox-item input[type="checkbox"] {
+    margin-top: 3px;
+}
+
+.form-group > .checkbox-item label {
+    line-height: 1.5;
+}
+
 .checkbox-item label {
-    flex-grow: 1;
     margin: 0;
 }
 
 .time-other-input {
-    margin-left: 0;
+    margin-left: 5px;
     width: 200px;
     max-width: 200px;
 }
@@ -446,19 +457,16 @@ body {
     /* Mobile-specific checkbox styling */
     .checkbox-item {
         align-items: center;
-        padding: 10px 0;
-        flex-wrap: nowrap;
+        padding: 5px 0;
     }
 
     .checkbox-item input[type="checkbox"] {
-        margin-top: 0;
         flex-shrink: 0;
     }
 
     .checkbox-item label {
         font-size: 16px;
         line-height: 1.4;
-        flex-grow: 1;
     }
 
     .time-other-input {
@@ -472,7 +480,6 @@ body {
     /* Special handling for PDPA checkbox */
     .form-group .checkbox-item {
         align-items: flex-start;
-        flex-wrap: wrap;
     }
 
     .form-group .checkbox-item input[type="checkbox"] {
@@ -481,8 +488,6 @@ body {
     }
 
     .form-group .checkbox-item label {
-        flex: 1;
-        min-width: 0;
         line-height: 1.5;
     }
 
